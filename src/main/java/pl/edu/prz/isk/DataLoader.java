@@ -6,6 +6,13 @@ import java.io.FileReader;
 import java.util.*;
 
 public class DataLoader {
+    /*
+    Loads graph from file.
+    File has following structure:
+    <number of edges>
+    <edge index> <edge source vertice> <edge destination vertice>
+    ...
+     */
     public static Graph loadData(File file) throws FileNotFoundException {
         Scanner scanner = new Scanner(new FileReader(file));
 
