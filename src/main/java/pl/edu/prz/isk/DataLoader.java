@@ -18,14 +18,14 @@ public class DataLoader {
 
         final Integer numberOfEdges = scanner.nextInt();
         final Set vertices = new HashSet();
-        final Map<Integer, Integer> graphEdges = new HashMap<>(numberOfEdges);
+        final List<Edge> graphEdges = new ArrayList<>(numberOfEdges);
 
         while(scanner.hasNextLine()) {
             scanner.nextInt(); // To ignore index of edge
             final Integer edgeSource = scanner.nextInt();
             final Integer edgeDestination = scanner.nextInt();
 
-            graphEdges.put(edgeSource, edgeDestination);
+            graphEdges.add(new Edge(edgeSource, edgeDestination));
 
             vertices.addAll(Set.of(edgeSource, edgeDestination));
         }
